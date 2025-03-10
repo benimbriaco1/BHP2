@@ -13,6 +13,8 @@ client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((target_host, target_port))
 
 # send data
+# this is an HTTP GET request, (requesting data from server) 
+# from the root (/) directory
 client.send((b"GET / HTTP/1.1\r\nHost: www.google.com\r\n\r\n"))
 
 # receive the server's response (up to 4096 bytes)
